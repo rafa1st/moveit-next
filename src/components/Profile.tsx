@@ -3,7 +3,8 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Profile.module.css'
 
 export function Profile() {
-    const { level } = useContext(ChallengesContext);
+    const { level, totalXP } = useContext(ChallengesContext);
+    
     return (
         <div className={styles.profileContainer}>
             <img src="https://github.com/rafa1st.png" alt="Rafael Rolim" />
@@ -11,7 +12,10 @@ export function Profile() {
                 <strong>Rafael Rolim</strong>
                 <p>
                     <img src="icons/level.svg" alt="level" />
-                    Level {level}
+                    Level: {level}
+                </p>
+                <p>
+                    Experiência total: {totalXP} xp
                 </p>
             </div>
         </div>

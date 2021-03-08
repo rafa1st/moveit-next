@@ -18,6 +18,7 @@ import { ChallengesProvider } from '../contexts/ChallengesContext';
 interface HomeProps {
   level: number;
   currentXP: number;
+  totalXP: number;
   challengesCompleted: number;
 }
 
@@ -27,6 +28,7 @@ export default function Home(props: HomeProps) {
       <ChallengesProvider
         level={props.level}
         currentXP={props.currentXP}
+        totalXP={props.totalXP}
         challengesCompleted={props.challengesCompleted}
       >
         <div className={styles.container}>
@@ -54,12 +56,13 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const {level, currentXP, challengesCompleted} = ctx.req.cookies;
+  const {level, currentXP, totalXP, challengesCompleted} = ctx.req.cookies;
   
   return {
     props: {
       level: Number(level),
       currentXP: Number(currentXP),
+      totalXP: Number(totalXP),
       challengesCompleted: Number(challengesCompleted)
     }
   }

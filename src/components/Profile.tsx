@@ -12,7 +12,7 @@ export function Profile() {
                 <strong>Rafael Rolim</strong>
                 <p>
                     <img src="icons/level.svg" alt="level" />
-                    Level: {level}
+                    Nível: {level}
                 </p>
                 <p>
                     Experiência total: {totalXP} xp

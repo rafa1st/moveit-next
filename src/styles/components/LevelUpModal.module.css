@@ -19,7 +19,7 @@
     border-radius: 5px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
     text-align: center;
-    position: relative;
+    position: relative;    
 }
 
 .container header {
@@ -48,5 +48,4 @@
     background: none;
     border: 0;
     font-size: 0;
-
 }
